@@ -534,3 +534,4 @@ Command :: convert '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-5zdi8o.j
 [paperclip] deleting /home/shoppersaysso/rails-paperclip-readme-v-000/public/system/authors/avatars/000/000/006/thumb/me.jpeg
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  UPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?  [["avatar_updated_at", "2017-09-19 01:07:49.046143"], ["avatar_file_name", "me.jpeg"], ["updated_at", "2017-09-19 01:07:49.149353"], ["id", 6]]
+  [1m[36m (17.7ms)[0m  [1mcommit transaction[0m
