@@ -291,3 +291,45 @@ Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by AuthorsController#new as HTML
   Rendered authors/_form.html.erb (36.8ms)
   Rendered authors/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 852ms (Views: 836.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 136.179.21.80 at 2017-09-19 01:01:59 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/authors" for 136.179.21.80 at 2017-09-19 01:02:39 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tlbpoeWGX0mc39NUnAJor86sTr5cEXEGEoH5Z+uUTnaELvaEWcHbvFU88TMxpxmp7JLFdrNYg0pYSh3nRIhCg==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x0000000276c530 @tempfile=#<Tempfile:/tmp/RackMultipart20170919-19363-1dj0jna.JPG>, @original_filename="IMG_8573.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"IMG_8573.JPG\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Sara", "bio"=>"Hi"}, "commit"=>"Create Author"}
+Command :: file -b --mime '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-19363-1q00c21.JPG'
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-19363-1suga61.JPG'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bio", "Hi"], ["name", "Sara"], ["avatar_file_name", "IMG_8573.JPG"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 2675600], ["avatar_updated_at", "2017-09-19 01:02:39.081421"], ["created_at", "2017-09-19 01:02:39.133946"], ["updated_at", "2017-09-19 01:02:39.133946"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://165.227.16.205:37024/authors/5
+Completed 302 Found in 107ms (ActiveRecord: 6.9ms)
