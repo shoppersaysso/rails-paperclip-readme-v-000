@@ -519,3 +519,18 @@ Processing by AuthorsController#show as HTML
   [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 6]]
   Rendered authors/show.html.erb within layouts/application (9.9ms)
 Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 1.1ms)
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE (avatar_file_name IS NOT NULL)  ORDER BY "authors"."id" ASC LIMIT 1000[0m
+Command :: file -b --mime '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-20213-qqmuwf.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-20213-jr0non.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-20213-jr0non.JPG[0]'
+Command :: convert '/tmp/b5e39243a712dc144f3d686b3d722f7120170919-20213-jr0non.JPG[0]' -auto-orient -resize "100x100>" '/tmp/42eb466bebe21fc2c92d40075c43503420170919-20213-o7u45j'
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["avatar_updated_at", "2017-09-19 01:07:48.178674"], ["avatar_file_name", "IMG_8573.JPG"], ["updated_at", "2017-09-19 01:07:49.021211"], ["id", 5]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-14n66mz.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-5zdi8o.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-5zdi8o.jpeg[0]'
+Command :: convert '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-5zdi8o.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/423deb8c2b37b2408dc0fa7835301ddc20170919-20213-1x7z83r'
+[paperclip] deleting /home/shoppersaysso/rails-paperclip-readme-v-000/public/system/authors/avatars/000/000/006/thumb/me.jpeg
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?  [["avatar_updated_at", "2017-09-19 01:07:49.046143"], ["avatar_file_name", "me.jpeg"], ["updated_at", "2017-09-19 01:07:49.149353"], ["id", 6]]
