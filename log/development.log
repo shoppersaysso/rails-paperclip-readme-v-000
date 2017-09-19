@@ -353,3 +353,39 @@ Processing by AuthorsController#show as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
   Rendered authors/show.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/5" for 136.179.21.80 at 2017-09-19 01:04:15 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 67ms (Views: 44.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/authors/5" for 136.179.21.80 at 2017-09-19 01:04:18 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/authors" for 136.179.21.80 at 2017-09-19 01:04:47 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tlbpoeWGX0mc39NUnAJor86sTr5cEXEGEoH5Z+uUTnaELvaEWcHbvFU88TMxpxmp7JLFdrNYg0pYSh3nRIhCg==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f46c5aaca68 @tempfile=#<Tempfile:/tmp/RackMultipart20170919-19363-esjspe.jpeg>, @original_filename="me.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"me.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"shopper", "bio"=>"Hi there"}, "commit"=>"Create Author"}
+Command :: file -b --mime '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-19363-1mzm2oe.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-19363-91r2px.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-19363-91r2px.jpeg[0]'
+Command :: convert '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-19363-91r2px.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/b093509837e850be071bf3966914d47720170919-19363-ksnfyg'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-19363-w8ggqw.jpeg'
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["bio", "Hi there"], ["name", "shopper"], ["avatar_file_name", "me.jpeg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 26121], ["avatar_updated_at", "2017-09-19 01:04:47.212092"], ["created_at", "2017-09-19 01:04:47.361461"], ["updated_at", "2017-09-19 01:04:47.361461"]]
+  [1m[36m (31.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.16.205:37024/authors/6
+Completed 302 Found in 218ms (ActiveRecord: 35.4ms)
