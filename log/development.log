@@ -535,3 +535,12 @@ Command :: convert '/tmp/ab86a1e1ef70dff97959067b723c5c2420170919-20213-5zdi8o.j
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  UPDATE "authors" SET "avatar_updated_at" = ?, "avatar_file_name" = ?, "updated_at" = ? WHERE "authors"."id" = ?  [["avatar_updated_at", "2017-09-19 01:07:49.046143"], ["avatar_file_name", "me.jpeg"], ["updated_at", "2017-09-19 01:07:49.149353"], ["id", 6]]
   [1m[36m (17.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/authors" for 136.179.21.80 at 2017-09-19 01:08:01 +0000
+Cannot render console from 136.179.21.80! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (481.1ms)
+Completed 200 OK in 555ms (Views: 525.7ms | ActiveRecord: 0.8ms)
